@@ -43,12 +43,21 @@
 
       </section>
 
+      <h2>As slice [page inlined]</h2>
 
+      <!-- SLICES inlined -->
+      <div v-for="(slice, index) in slices" :key="'slice-' + index">
+        <!-- IMAGE -->
+        <template v-if="slice.slice_type === 'image'">
+          <slice-image :sliceRaw="slice"/>
+        </template>
+      </div>
 
-      <h2>As slice</h2>
+      <br><br>
+      <h2>As slice [components/slices.vue]</h2>
 
-       <!-- SLICES / CONTENT - - From Prismic -->
-       <site-slices :slicesRaw="slices"/>
+      <!-- SLICES as component -->
+      <site-slices :slicesRaw="slices"/>
 
     </div>
 
@@ -59,10 +68,12 @@
 <script>
 
 import siteSlices   from '~/components/slices.vue'
+import sliceImage  from '~/components/slices/image.vue'
 
 export default {
   components: {
-    siteSlices
+    siteSlices,
+    sliceImage
   },
   async asyncData ({ $prismic }) {
     const start = await $prismic.api.getSingle('startpage')
