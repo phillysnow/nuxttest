@@ -1,0 +1,18 @@
+{
+  "name": "at-bug-prismic-nuxt--preview",
+  "version": "1.0.0",
+  "description": "Repository to recreate a priview bug for prismic.io using nuxt generate, hosted on Netlify.",
+  "author": "Kenneth Illman",
+  "private": true,
+  "scripts": {
+    "dev": "nuxt",
+    "build": "nuxt build",
+    "start": "nuxt start",
+    "generate": "nuxt generate"
+  },
+  "dependencies": {
+    "@nuxtjs/prismic": "^1.1.1",
+    "nuxt": "^2.0.0"
+  },
+  "devDependencies": {}
+}
