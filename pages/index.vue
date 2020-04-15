@@ -3,7 +3,7 @@
     <div>
 
       <h1 class="title">
-        bug-prismic-nuxt-preview
+        pages/index.vue
       </h1>
       <br><br>
 
@@ -43,9 +43,12 @@
 
       </section>
 
+
+
+<!-- SLICES loop inlined -->
+
       <h2>As slice [page inlined]</h2>
 
-      <!-- SLICES loop inlined -->
       <div v-for="(slice, index) in slices" :key="'slice-' + index">
         <!-- IMAGE -->
         <template v-if="slice.slice_type === 'image'">
@@ -54,10 +57,17 @@
       </div>
 
       <br><br>
+
+
+
+<!-- SLICES loop as component -->
+
       <h2>As slice [components/slices.vue]</h2>
 
-      <!-- SLICES loop as component -->
       <site-slices :slicesRaw="slices"/>
+
+
+
 
     </div>
 
