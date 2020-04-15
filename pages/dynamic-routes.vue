@@ -4,7 +4,7 @@
 
   <div class="prismic-all-dynamic-routes" >
 
-    <!-- Needed to catch pages only linked from content not menus -->
+    <!-- Needed for crawler to catch pages only linked from content not menus -->
     <ul>
       <li v-for="(link, index) in all" :key="'link-' + index" >
 
