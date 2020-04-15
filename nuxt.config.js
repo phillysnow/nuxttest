@@ -33,6 +33,8 @@ export default {
   ** Nuxt.js dev-modules
   */
   buildModules: [
+    '@/modules/crawler',
+    '@/modules/static'
   ],
   /*
   ** Nuxt.js modules
