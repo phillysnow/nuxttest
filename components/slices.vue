@@ -1,8 +1,5 @@
 <template>
   <div>
-
-
-
     <div v-for="(slice, index) in slices" :key="'slice-' + index">
 
       <!-- IMAGE -->
@@ -12,6 +9,7 @@
 
     </div>
   </div>
+
 </template>
 
 
