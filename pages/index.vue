@@ -3,7 +3,7 @@
     <div>
 
       <h1 class="title">
-        at-bug-prismic-nuxt--preview
+        bug-prismic-nuxt-preview
       </h1>
       <br><br>
 
