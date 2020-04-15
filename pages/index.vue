@@ -45,7 +45,7 @@
 
       <h2>As slice [page inlined]</h2>
 
-      <!-- SLICES inlined -->
+      <!-- SLICES loop inlined -->
       <div v-for="(slice, index) in slices" :key="'slice-' + index">
         <!-- IMAGE -->
         <template v-if="slice.slice_type === 'image'">
@@ -56,7 +56,7 @@
       <br><br>
       <h2>As slice [components/slices.vue]</h2>
 
-      <!-- SLICES as component -->
+      <!-- SLICES loop as component -->
       <site-slices :slicesRaw="slices"/>
 
     </div>
