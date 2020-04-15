@@ -1,6 +1,6 @@
 # at-bug-prismic-nuxt--preview
 
-> Repository to recreate a priview bug for prismic.io using nuxt generate, hosted on Netlify.
+> Repository to recreate a preview bug for prismic.io using Nuxt.js generate, hosted on Netlify.
 
 ## Build Setup
 
