@@ -8,13 +8,18 @@
       <br><br>
 
       <section class="text">
+        <prismic-rich-text class="homepage-banner-box" :field="start.data.header" />
+      </section>
+      <br><br>
+
+      <section class="text">
         <prismic-rich-text class="homepage-banner-box" :field="start.data.text" />
         <br><br>
       </section>
 
       <section class="images">
 
-        Multiple image views
+        Multiple image views PICTURE TAG
         <br><br>
 
         <picture>
@@ -24,12 +29,26 @@
         </picture>
         <br><br>
 
-        Singel view
+        Multiple image views PRISMIC-IMAGE TAG
+        <br><br>
+
+        <prismic-image class="homepage-banner-image" :field="start.data.image" />
+        <br><br>
+
+        Singel view PRISMIC-IMAGE TAG
         <br><br>
 
         <prismic-image class="homepage-banner-image" :field="start.data.image_singel" />
+        <br><br>
 
       </section>
+
+
+
+      <h2>As slice</h2>
+
+       <!-- SLICES / CONTENT - - From Prismic -->
+       <site-slices :slicesRaw="slices"/>
 
     </div>
 
@@ -39,10 +58,16 @@
 
 <script>
 
+import siteSlices   from '~/components/slices.vue'
+
 export default {
+  components: {
+    siteSlices
+  },
   async asyncData ({ $prismic }) {
     const start = await $prismic.api.getSingle('startpage')
-    return { start }
+    const slices = start.data.body
+    return { start, slices}
   }
 }
 </script>
@@ -57,7 +82,7 @@ img {
 .container {
   margin: 40px auto;
   min-height: 100vh;
- width: 80%;
+  width: 80%;
   min-width: 300px;
   text-align: center;
 
