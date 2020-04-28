@@ -39,5 +39,3 @@ export default {
   name: 'slice-impact-image'
 }
 </script>
-
-

@@ -1,5 +1,3 @@
-
-
 <template>
   <div>
 
@@ -39,5 +37,3 @@ export default {
   name: 'slice-impact-image'
 }
 </script>
-
-
