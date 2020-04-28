@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div v-for="(slice, index) in slices" :key="'slice-' + index">
+    <div v-for="(slice, index) in slicesRaw" :key="'slice-' + index">
 
       <!-- IMAGE -->
       <template v-if="slice.slice_type === 'image'">
@@ -12,9 +12,7 @@
 
 </template>
 
-
 <script>
-
 import sliceImage  from '~/components/slices/image.vue'
 
 export default {
@@ -24,13 +22,7 @@ export default {
   ],
   components: {
     sliceImage
-  },
-  data () {
-    return {
-      slices: this.slicesRaw
-    };
   }
-
 };
 </script>
 
