@@ -43,8 +43,7 @@ export default {
   '@nuxtjs/prismic'
   ],
   prismic: {
-    endpoint: 'https://at-bug-preview-netlify.cdn.prismic.io/api/v2',
-    preview: '/preview/' // because we use nuxt generate
+    endpoint: 'https://at-bug-preview-netlify-clone.cdn.prismic.io/api/v2',
   },
   /*
   ** Build configuration
@@ -53,7 +52,13 @@ export default {
     /*
     ** You can extend webpack config here
     */
-    extend (config, ctx) {
+    extend(config, ctx) {
+      // to transform link with <nuxt-link> for the htmlSerializer
+      config.resolve.alias['vue'] = 'vue/dist/vue.common'
     }
+  },
+
+  generate: {
+    fallback: '404.html' // Netlify reads a 404.html, Nuxt will load as an SPA
   }
 }
